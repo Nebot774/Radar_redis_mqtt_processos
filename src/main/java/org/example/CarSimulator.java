@@ -97,9 +97,7 @@ public class CarSimulator {
         return numbers + letters;
     }
 
-    public static void main(String[] args) throws MqttException {
-        CarSimulator simulator = new CarSimulator();
-        simulator.velocidadVehiculo(); // Comenzamos la publicación de datos de vehículos
-    }
+
+
 }
 

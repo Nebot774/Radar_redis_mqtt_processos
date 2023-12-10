@@ -84,7 +84,5 @@ public class Radar {
         }
     }
 
-    public static void main(String[] args) throws MqttException {
-        new Radar(); // Iniciar el radar
-    }
+
 }
