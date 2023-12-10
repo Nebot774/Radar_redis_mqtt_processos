@@ -15,6 +15,7 @@ public class PoliceStation {
     private MqttClient mqttClient;
     private Jedis redisClient;
 
+
     // Límite de velocidad para cálculo de multas
     private final int speedLimit = 80;
 
@@ -24,7 +25,7 @@ public class PoliceStation {
         mqttClient.connect();
 
         // Conexión con Redis
-        redisClient = new Jedis("localhost");
+        redisClient = new Jedis("localhost", 6379);
 
         // Procesar infracciones en un hilo separado
         new Thread(this::procesarInfracciones).start();

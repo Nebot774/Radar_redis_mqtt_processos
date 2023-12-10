@@ -65,7 +65,8 @@ public class Radar {
         mqttClient.subscribe(mqttTopic);
 
         // Conectar al servidor Redis
-        redisClient = new Jedis("localhost");
+        redisClient = new Jedis("localhost", 6379); // 6379 es el puerto por defecto de Redis
+
     }
 
     private void procesarDatosVehiculo(String datos) {
